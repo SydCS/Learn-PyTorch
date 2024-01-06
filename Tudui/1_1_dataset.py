@@ -24,7 +24,7 @@ class MyDataset(Dataset):
         return len(self.img_name_list)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     root_dir = "hymenoptera_data/train"
     ants_label = "ants"
     bees_label = "bees"

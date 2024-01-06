@@ -3,12 +3,20 @@ from torch import nn
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-from model import *
+from Tudui import *
 
-train_data = torchvision.datasets.CIFAR10(root="../data", train=True, transform=torchvision.transforms.ToTensor(),
-                                          download=True)
-test_data = torchvision.datasets.CIFAR10(root="../data", train=False, transform=torchvision.transforms.ToTensor(),
-                                         download=True)
+train_data = torchvision.datasets.CIFAR10(
+    root="../data",
+    train=True,
+    transform=torchvision.transforms.ToTensor(),
+    download=True,
+)
+test_data = torchvision.datasets.CIFAR10(
+    root="../data",
+    train=False,
+    transform=torchvision.transforms.ToTensor(),
+    download=True,
+)
 
 # length 长度
 train_data_size = len(train_data)
