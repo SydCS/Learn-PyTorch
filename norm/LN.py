@@ -2,13 +2,13 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-feature_array = np.array([[[[1, 0], [0, 2]],
-                           [[3, 4], [1, 2]],
-                           [[2, 3], [4, 2]]],
-
-                          [[[1, 2], [-1, 0]],
-                           [[1, 2], [3, 5]],
-                           [[1, 4], [1, 5]]]], dtype=np.float32)
+feature_array = np.array(
+    [
+        [[[1, 0], [0, 2]], [[3, 4], [1, 2]], [[2, 3], [4, 2]]],
+        [[[1, 2], [-1, 0]], [[1, 2], [3, 5]], [[1, 4], [1, 5]]],
+    ],
+    dtype=np.float32,
+)
 
 feature_array = feature_array.reshape((2, 3, -1)).transpose(0, 2, 1)
 feature_tensor = torch.tensor(feature_array.copy(), dtype=torch.float32)
